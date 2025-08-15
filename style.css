@@ -27,7 +27,7 @@ header h1 {
 nav {
     background-color: #333;
     overflow: hidden;
-    position: relative; /* 为标语定位做准备 */
+    position: relative;
 }
 
 nav a {
@@ -46,7 +46,6 @@ nav a:hover {
     color: black;
 }
 
-/* 标语样式 */
 .slogan {
     position: absolute;
     right: 20px;
@@ -76,9 +75,49 @@ nav a:hover {
     display: block;
 }
 
-.works-intro {
+/* 博客列表样式 */
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-item {
+    display: flex;
     margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.blog-cover {
+    flex: 0 0 200px;
+    margin-right: 20px;
+}
+
+.blog-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-content {
+    flex: 1;
+}
+
+.blog-content h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.5em;
+}
+
+.blog-content p {
     line-height: 1.6;
+    color: #555;
 }
 
 .works-grid {
@@ -139,6 +178,7 @@ nav a:hover {
     font-style: italic;
 }
 
+/* 移动端标语固定在底部 */
 @media (max-width: 768px) and (orientation: portrait) {
     header {
         padding: 30px 15px;
@@ -156,6 +196,7 @@ nav a:hover {
     .container {
         padding: 15px;
     }
+    
     .works-grid {
         grid-template-columns: 1fr !important;
         gap: 20px;
@@ -177,9 +218,33 @@ nav a:hover {
         font-size: 1.1em;
     }
     
-    /* 移动端隐藏标语 */
+    /* 移动端标语显示在底部 */
     .slogan {
-        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    
+    /* 博客列表移动端样式 */
+    .blog-item {
+        flex-direction: column;
+    }
+    
+    .blog-cover {
+        flex: 0 0 auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .blog-cover img {
+        width: 100%;
     }
 }
 
