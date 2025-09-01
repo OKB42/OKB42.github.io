@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    color: #333;
+    color: #2C343F;
     position: relative; /* 为右侧社交链接定位做准备 */
 }
 
@@ -26,7 +26,7 @@ header h1 {
 }
 
 nav {
-    background-color: #333;
+    background-color: #2C343F;
     overflow: hidden;
     position: relative;
 }
@@ -34,7 +34,7 @@ nav {
 nav a {
     float: left;
     display: block;
-    color: white;
+    color: #BDC3C7;
     text-align: center;
     padding: 16px 24px;
     text-decoration: none;
@@ -43,8 +43,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #BDC3C7;
+    color: #2C343F;
 }
 
 .slogan {
@@ -76,7 +76,6 @@ nav a:hover {
     display: block;
 }
 
-/* 博客列表样式 */
 .blog-list {
     list-style: none;
     padding: 0;
@@ -121,7 +120,6 @@ nav a:hover {
     color: #555;
 }
 
-/* 新增的日期样式 */
 .blog-date {
     margin-top: 15px;
     font-size: 0.9em;
@@ -162,7 +160,7 @@ nav a:hover {
 
 .works-info h3 {
     margin: 0 0 12px 0;
-    color: #2c3e50;
+    color: #2C343F;
     font-size: 1.3em;
 }
 
@@ -186,39 +184,6 @@ nav a:hover {
     margin: 15px 0;
     font-style: italic;
 }
-
-#social-links {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.5em;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    background-color: #77cde3;
-    transform: scale(1.1);
-}
-
-
 @media (max-width: 768px) and (orientation: portrait) {
     header {
         padding: 30px 15px;
